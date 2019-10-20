@@ -1,0 +1,22 @@
+{
+    "background": false,                            // true to run the cc-server in the background (no console)
+    "colors": true,                                 // false to disable colored output
+    "log-file": null,                               // log all output to a file
+    "syslog": false,                                // use system log for output messages
+    "cc-server": {
+        "port": 8989,                               // port the CC Server will listens on
+        "use-tls" : false,                          // use tls for CC communication (needs to be enabled on miners too)
+        "cert-file" : "server.pem",                 // when tls is turned on, use this to point to the right cert file
+        "key-file" : "server.key",                  // when tls is turned on, use this to point to the right key file
+        "access-token": "$SECRET_TOKEN",                 // access token for CC Clients (should be set!!!)
+        "user": "admin",                            // admin user for access CC Dashboard
+        "pass": "pass",                             // admin pass for access CC Dashboard
+        "client-config-folder" : null,              // folder which contains the client-config files (null=current)
+        "client-log-lines-history" : 100,           // maximum lines of log history kept per miner
+        "custom-dashboard" : "index.html",          // dashboard html file
+        "pushover-user-key" : "PUT_YOUR_USER_KEY_HERE",                   // your user key for pushover notifications
+        "pushover-api-token" : "PUT_YOUR_API_TOKEN_KEY_HERE",                  // api token/keytoken of the application for pushover notifications
+        "push-miner-offline-info" : true,           // push notification for offline miners
+        "push-periodic-mining-status" : true        // push periodic status notification (every hour)
+    }
+}
